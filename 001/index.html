@@ -5,6 +5,8 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Tab Icon -->
+    <link rel = "icon" href = "https://cdn.glitch.com/d967f784-e2ff-4e08-b19f-fc6e75b08dae%2FJS%20Icon.png">
     <!-- import the webpage's stylesheet -->
     <link rel="stylesheet" href="/style.css" />
     <!-- import the webpage's javascript file -->
@@ -28,24 +30,17 @@
             let images = [
                 "https://cdn.glitch.com/d3dbf883-f5eb-4d8e-8264-6796c240ce5d%2FboxWhite.png",
                 "https://cdn.glitch.com/d3dbf883-f5eb-4d8e-8264-6796c240ce5d%2FboxRed.png",
-                "https://cdn.glitch.com/d3dbf883-f5eb-4d8e-8264-6796c240ce5d%2FboxBlue.png",
-                "https://cdn.glitch.com/d3dbf883-f5eb-4d8e-8264-6796c240ce5d%2FboxBlack.png",
-                "https://cdn.glitch.com/d3dbf883-f5eb-4d8e-8264-6796c240ce5d%2FboxFlash.gif"
-              ],
+                "https://cdn.glitch.com/d3dbf883-f5eb-4d8e-8264-6796c240ce5d%2FboxBlue.png"],
 <!--Select image after first click-->                
               i = 0;
-
             for (let j = images.length; j--; ) {
               let img = new Image();
-              img.src = images[j];
-            }
+              img.src = images[j];}
             document.getElementById("myImage").addEventListener(
               "click",
               function() {
-                this.src = images[i >= images.length - 1 ? (i = 0) : ++i];
-              },
-              false
-            );
+                this.src = images[i >= images.length - 1 ? (i = 0) : ++i];},
+              false);
           </script>
         </div>
       </div>
