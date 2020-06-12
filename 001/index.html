@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Hello!</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+    <!-- import the webpage's javascript file -->
+    <script src="/script.js"></script>
+  </head>
+  <body>
+    <div>
+      <h1>
+        Changing image on click/tap
+      </h1>
+      <h2>
+        AKA Toggle Image
+      </h2>
+      <div>
+        <div>
+          <img
+            id="myImage"
+            src="https://cdn.glitch.com/d3dbf883-f5eb-4d8e-8264-6796c240ce5d%2FboxWhite.png"
+          />
+          <script type="text/javascript">
+            let images = [
+                "https://cdn.glitch.com/d3dbf883-f5eb-4d8e-8264-6796c240ce5d%2FboxWhite.png",
+                "https://cdn.glitch.com/d3dbf883-f5eb-4d8e-8264-6796c240ce5d%2FboxRed.png",
+                "https://cdn.glitch.com/d3dbf883-f5eb-4d8e-8264-6796c240ce5d%2FboxBlue.png",
+                "https://cdn.glitch.com/d3dbf883-f5eb-4d8e-8264-6796c240ce5d%2FboxBlack.png",
+                "https://cdn.glitch.com/d3dbf883-f5eb-4d8e-8264-6796c240ce5d%2FboxFlash.gif"
+              ],
+<!--Select image after first click-->                
+              i = 0;
+
+            for (let j = images.length; j--; ) {
+              let img = new Image();
+              img.src = images[j];
+            }
+            document.getElementById("myImage").addEventListener(
+              "click",
+              function() {
+                this.src = images[i >= images.length - 1 ? (i = 0) : ++i];
+              },
+              false
+            );
+          </script>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
